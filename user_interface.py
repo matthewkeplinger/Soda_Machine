@@ -26,7 +26,6 @@ def validate_main_menu(user_input):
     return switcher.get(user_input, (False, None))
 
 
-
 def display_customer_wallet_info(coins_list, total_value):
     """Takes in a list of ints to display number of coins along with total value of coins."""
     print(f'You have {coins_list[0]} Quarters')
@@ -75,7 +74,7 @@ def soda_selection(inventory):
         print("Please choose from the following options:")
         i = 1
         for can in soda_options:
-            print(f"\n\tEnter -{i}- for {can} : ${can.price}")
+            print(f"\n\tEnter -{i}- for {can.name} : ${can.price}")
             i +=1
         user_selection = try_parse_int(input("Selection:"))
         validated_user_selection = validate_coin_choice(user_selection, soda_options)
