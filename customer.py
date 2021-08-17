@@ -1,5 +1,5 @@
 import user_interface
-from backpack import *
+from backpack import Backpack
 from wallet import Wallet
 
 class Customer:
