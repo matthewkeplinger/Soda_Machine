@@ -48,7 +48,7 @@ def display_welcome():
 
 def output_text(text):
     """User input method that will print to console any string passed in as an argument"""
-    print("text")
+    print(text)
 
 
 def clear_console():
@@ -76,7 +76,7 @@ def soda_selection(inventory):
         for can in soda_options:
             print(f"\n\tEnter -{i}- for {can.name} : ${can.price}")
             i +=1
-        user_selection = try_parse_int(input("Selection:"))
+        user_selection = try_parse_int(input("Selection: "))
         validated_user_selection = validate_coin_choice(user_selection, soda_options)
     return validated_user_selection[1]
 
@@ -107,7 +107,7 @@ def get_unique_can_names(inventory):
             continue
         else:
             unique_cans.append(can)
-            previous_names.append(can.name)
+            previous_names.append(can)
     return unique_cans
 
 
@@ -129,10 +129,10 @@ def coin_selection():
     """Prompts user to choose which coins to deposit and passes their selection in validate_coin_selection"""
     validated_user_selection = (False, None)
     while validated_user_selection[0] is False:
-        print("\n\tEnter -Q- for Quarter")
-        print("\tEnter -D- for Dime")
-        print("\tEnter -N- for Nickel")
-        print("\tEnter -P- for Penny")
+        print("\n\tEnter -1- for Quarter")
+        print("\tEnter -2- for Dime")
+        print("\tEnter -3- for Nickel")
+        print("\tEnter -4- for Penny")
         print("\tEnter -5- for when finished to deposit payment into machine")
         user_input = try_parse_int(input())
         validated_user_selection = validate_coin_selection(user_input)
