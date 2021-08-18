@@ -156,9 +156,5 @@ def validate_coin_selection(selection):
 def end_message(soda_name, change_amount):
     """Closing message displaying name of soda purchased and amount of change returned"""
     print(f'Enjoy your {soda_name.name}')
-<<<<<<< HEAD
-    if change_amount > 0:
-=======
     if change_amount >= 0:
->>>>>>> 82923240c072be1a023429aef39792736635c101
         print(f'Dispensing ${change_amount}')
