@@ -2,7 +2,8 @@
 import user_interface
 from customer import Customer
 from soda_machine import SodaMachine
-from coins import Coin
+from backpack import Backpack
+
 class Simulation:
     def __init__(self):
         pass
@@ -11,6 +12,7 @@ class Simulation:
         """The central method called in main.py."""
         customer = Customer()
         soda_machine = SodaMachine()
+        #backpack = Backpack()
         will_proceed = True
         while will_proceed:
             user_option = user_interface.simulation_main_menu()
