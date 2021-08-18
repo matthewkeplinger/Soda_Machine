@@ -8,7 +8,6 @@ class Wallet:
 
     def fill_wallet(self):
         """Method will fill wallet's money list with certain amount of each type of coin when called."""
-        #coins = Coin()
         for index in range(8):
             self.money.append(Quarter())
         for index in range(10):
