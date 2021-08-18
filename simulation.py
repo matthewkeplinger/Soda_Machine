@@ -21,6 +21,6 @@ class Simulation:
             elif user_option == 2:
                 customer.check_coins_in_wallet()
             elif user_option == 3:
-                customer.check_backpack()
+                customer.check_backpack(customer.backpack)
             else:
                 will_proceed = False
